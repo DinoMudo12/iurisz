@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrevivência 2D - 2 Players</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud">
+
+        <div class="player-hud blue">
+            <strong>🔵 PLAYER 1</strong>
+            <span>❤️ <span id="health1">100</span></span>
+        </div>
+
+        <div class="game-info">
+            <span>⭐ <span id="score">0</span></span>
+            <span>💀 Onda <span id="wave">1</span></span>
+            <span>⏱️ <span id="time">0</span>s</span>
+        </div>
+
+        <div class="player-hud green">
+            <strong>🟢 PLAYER 2</strong>
+            <span>❤️ <span id="health2">100</span></span>
+        </div>
+
+    </div>
+
+    <div id="start-screen" class="screen">
+
+        <h1>☠️ SOBREVIVA!</h1>
+
+        <p>Agora você pode jogar com 2 jogadores!</p>
+
+        <div class="controls">
+
+            <div class="control-card blue-card">
+                <h2>🔵 PLAYER 1</h2>
+
+                <p><b>W A S D</b> — Mover</p>
+                <p><b>MOUSE</b> — Mirar</p>
+                <p><b>CLIQUE</b> — Atirar</p>
+            </div>
+
+            <div class="control-card green-card">
+                <h2>🟢 PLAYER 2</h2>
+
+                <p><b>↑ ↓ ← →</b> — Mover</p>
+                <p><b>J / L</b> — Girar mira</p>
+                <p><b>ESPAÇO</b> — Atirar</p>
+            </div>
+
+        </div>
+
+        <button id="startButton">JOGAR</button>
+
+    </div>
+
+    <div id="game-over" class="screen hidden">
+
+        <h1>💀 GAME OVER</h1>
+
+        <p>Pontuação: <span id="finalScore">0</span></p>
+        <p>Tempo sobrevivido: <span id="finalTime">0</span>s</p>
+
+        <button id="restartButton">
+            JOGAR NOVAMENTE
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
